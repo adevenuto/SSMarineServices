@@ -68,7 +68,7 @@
       <span id="copyright">Copyright </span><a href="/">S&amp;S Marine Services</a> <span id="date"><?php echo date("Y"); ?></span>
     </div>
     <div class="footer-base-right">
-      <img src="http://localhost:8888/wp-content/uploads/2016/12/logo.png" alt="Company Logo" id="logo"/>
+      <img src="<?php bloginfo('stylesheet_directory')?>/assets/images/logo_modified.png" alt="Company Logo" id="logo"/>
     </div>
   </div>
 </div>

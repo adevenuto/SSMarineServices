@@ -372,6 +372,7 @@ input[type='submit']:focus, input[type='submit']:active, input[type='submit']:ho
   background-color: #ffffff;
   border-color: #e7e7e7;
   border-bottom: transparent;
+  box-shadow: 0px 0px 1px 1px #000;
 }
 .navbar-default .navbar-nav>li>a {
   color: #000;
@@ -411,6 +412,8 @@ input[type='submit']:focus, input[type='submit']:active, input[type='submit']:ho
   font-size: 1em;
   background: #9f9f9f;
   border-bottom: 1px solid #f00;
+  background: #323334;
+  box-shadow: 0px 0px 1px 1px #000;
 }
 .fa-phone {
 	margin-right: 10px;
@@ -420,21 +423,21 @@ input[type='submit']:focus, input[type='submit']:active, input[type='submit']:ho
 	color: #f00;
 }
 #phone-numbers a {
-	color: #000;
+	color: #fff;
 }
 #phone1 {
 	float: right;
   margin-right: 26px;
 }
 #phone1:hover .fa-phone {
-	color: #000;
+	color: #fff;
 }
 #phone2 {
 	float: right;
 	margin-right: 26px;
 }
 #phone2:hover .fa-phone {
-	color: #000;
+	color: #fff;
 }
 /* Hamburger in nav */
 /********************/
@@ -651,6 +654,10 @@ hr {
 }
 /* SIDEBAR */
 /***********/
+.sidebar {
+	background: #323334;
+	padding: 10px;
+}
 #sb-arrow {
 	color: #f00;
 	font-size: 1em;
@@ -674,14 +681,14 @@ hr {
 }
 .widget h2 {
 	border-bottom: 1px solid #fff;
-	color: #000;
+	color: #fff;
 }
 .widget h2:first-child {
 	margin-top: 0px;
 }
 .widget a {
 	font-size: 1em;
-	color: #000;
+	color: #fff;
 }
 .widget a:hover {
 	color: #fff;
@@ -689,16 +696,16 @@ hr {
 .widget li {
 	list-style: none;
 	position: relative;
+	transition: left 100ms ease-in-out;
 	left: 0;
+}
+.widget li:hover {
+	position: relative;
+	left: 3px;
 }
 .widget ul {
 	padding: 0;
 	margin-bottom: 0;
-}
-.widget li:hover {
-	transition: left 100ms ease-in-out;
-	position: relative;
-	left: 3px;
 }
 .widget li:not(:last-child) {
 	margin-bottom: 7px;
@@ -707,12 +714,27 @@ hr {
   background: #f00;
   color: #fff;
 }
-.sidebar {
-	background: #9f9f9f;
-	padding: 10px;
-}
 .gform_body {
 	max-width: 400px;
+}
+/* GRAVITY FORM ERROR */
+/**********************/
+ body .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: transparent;
+  margin-bottom: 6px!important;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+body .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), body .gform_wrapper li.gfield_error textarea {
+    border: 1px solid #f00;
+}
+body .gform_wrapper .validation_message {
+  color: #fff;
+}
+body .gform_wrapper div.validation_error {
+  color: #f00;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 /* MONARCH */
@@ -820,6 +842,7 @@ hr {
 .post-image {
 	position: relative;
 	overflow: hidden;
+  box-shadow: 0px 0px 1px 1px #323334;
 }
 .post-tags {
 	position: absolute;
@@ -922,13 +945,13 @@ time {
 /**********/
 /* Footer Top */
 #footer {
-	background: #9f9f9f;
+	background: #323334;
   color: #000;
   padding-top: 10px;
   border-top: 2px solid #f00;
 }
 .fa-angle-double-down {
-	color: #fff;
+	color: #f00;
 }
 #map-container {
 	height: 175px;
@@ -951,7 +974,7 @@ time {
   font-size: 1.2em;
 }
 .fa-arrow-right {
-	color: #fff;
+	color: #f00;
 }
 .payments h4, .yelp h4, .recent-blogs h4{
 	margin-bottom: 5px;
@@ -962,6 +985,7 @@ time {
 #social i {
 	position: relative;
 	top: 2px;
+  color: #fff;
 	margin-right: 15px;
 	letter-spacing: 1px;
 	font-size: 1.8em;
@@ -969,10 +993,13 @@ time {
 	transition: color 100ms ease-in-out;
 }
 #social i:hover {
-	color: #fff;
+	color: #adadad;
 }
 #footer .col-xl-4:not(:last-child) {
 	margin-bottom: 25px;
+}
+#footer h4 {
+	color: #adadad;
 }
 #footer li {
 	position: relative;
@@ -992,17 +1019,18 @@ time {
 	color: #fff;
 }
 #footer li a {
-  color: #000;
+  color: #fff;
   padding: 5px 0;
   font-size: 1.1em;
 }
 /* Footer base */
 .footer-base {
-  border-top: 1px dotted #000;
-	height: 40px;
-	width: 100%;
-	margin-top: 10px;
-	position: relative;
+  border-top: 1px dotted #f00;
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+  background: #fff;
+  position: relative;
 }
 .footer-base-left {
 	position: absolute;
@@ -1021,11 +1049,11 @@ time {
 	color: #000;
 }
 #date {
-	/*color: #003264;*/
+	color: #000;
 }
 #copyright {
 	font-size: 1em;
-	/*color: #003264;*/
+	color: #000;
 }
 
 
@@ -1151,6 +1179,13 @@ time {
     transform: translate(-50%, 0);
 	}
 }
+/* gravity form */
+@media only screen and (min-width: 641px) {
+	body .gform_wrapper .top_label input.medium, .gform_wrapper .top_label select.medium {
+	     width: 85%;
+	}
+}
+/****************/
 @media only screen and (max-width: 475px) {
 	#hero-section-message h1 {
     font-size: 2.4em;
