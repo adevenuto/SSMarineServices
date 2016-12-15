@@ -670,6 +670,7 @@ hr {
 .search-field {
 	padding: 5px 4px;
 	max-width: 149px;
+  color: #fff;
 }
 #secondary .search-submit {
 	padding: 5px;
@@ -758,7 +759,7 @@ body .gform_wrapper div.validation_error {
 	color: #fff;
 }
 .service-area-link a:hover {
-	color: #000;
+	color: #adadad;
 }
 .service-areas {
 	background: #f0f0f0;
@@ -783,9 +784,6 @@ body .gform_wrapper div.validation_error {
 
 
 
-
-
-
 /* BLOGS PAGES */
 /***************/
 /* INDEX */
@@ -806,8 +804,10 @@ body .gform_wrapper div.validation_error {
 .blog-container .blog-content {
 	padding: 0 5px 5px 5px;
 	height: 350px;
-	/*height: auto;*/
 	margin: 0;
+}
+.blog-container .search-results {
+  height: auto;
 }
 .post-details {
 	position: relative;
@@ -892,11 +892,19 @@ time {
 /* Archives header */
 /*******************/
 .page-blogs .page-title {
-	margin-top: 0;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
   padding-left: 20px;
-  margin-bottom: 20px;
 }
-
+/* SEARCH RESULTS PAGE */
+/***********************/
+.search-results .page-title {
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+}
+.search-results h4 a{
+  font-size: 1.3em;
+}
 
 /* PAGINATION FOR BLOGS */
 /************************/
