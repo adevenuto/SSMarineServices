@@ -525,7 +525,6 @@ input[type='submit']:focus, input[type='submit']:active, input[type='submit']:ho
 }
 .services-info i {
 	font-size: 9em;
-	/*color: #4d4d4d;*/
 	color: #000;
 }
 .fa-anchor {
@@ -938,7 +937,28 @@ time {
 	background-color: #f00;
 	color: #fff;
 }
-
+/* FORM */
+/********/
+.form {
+	background: #323334;
+	padding: 10px;
+	color: #fff;
+}
+.form h3 {
+	font-size: 2em;
+}
+body .gform_wrapper .gfield_required {
+  color: #f00;
+}
+body .gform_wrapper .gfield_error .gfield_label {
+  color: #fff;
+}
+body .gform_wrapper li.gfield_error ul.gfield_radio {
+  color: #fff;
+}
+.form .gform_body {
+  max-width: 100%;
+}
 
 
 /* FOOTER */
@@ -1182,7 +1202,7 @@ time {
 /* gravity form */
 @media only screen and (min-width: 641px) {
 	body .gform_wrapper .top_label input.medium, .gform_wrapper .top_label select.medium {
-	     width: 85%;
+    width: 100%;
 	}
 }
 /****************/

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: contact-us Page
+Template Name: service-request-page
 */
 get_header(); ?>
   <?php if (have_posts()) {
