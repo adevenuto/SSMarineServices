@@ -48,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost:8888"><img src="http://localhost:8888/wp-content/uploads/2016/12/logo.png" alt="Company Logo" id="logo" width="110" height=""/></a>
+      <a class="navbar-brand" href="http://localhost:8888"><img src="<?php bloginfo('stylesheet_directory');?>/assets/images/logo_modified.png" alt="Company Logo" id="logo" width="110" height=""/></a>
     </div>
      <?php
     	wp_nav_menu( array(
