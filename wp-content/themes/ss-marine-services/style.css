@@ -345,7 +345,7 @@ input[type='search'], input[type='text'], input[type='email'], input[type='butto
   border-style: solid;
   border-width: 1px;
   border-color: #fff;
-  background: transparent;
+  /*background: transparent;*/
   box-shadow: none;
   text-shadow: none;
 }
@@ -726,11 +726,11 @@ hr {
   border-bottom: 1px solid transparent;
 }
 body .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), body .gform_wrapper li.gfield_error textarea {
-    border: 1px solid #f00;
+    border: 2px solid #f00;
 }
-body .gform_wrapper .validation_message {
+/*body .gform_wrapper .validation_message {
   color: #fff;
-}
+}*/
 body .gform_wrapper div.validation_error {
   color: #f00;
   border-top: 2px solid transparent;
@@ -741,6 +741,17 @@ body .gform_wrapper div.validation_error {
 /***********/
 .et_monarch .et_social_mobile_button {
   display: none;
+}
+.et_monarch .et_social_googleplus,
+.et_monarch .et_social_networks.et_social_circle .et_social_googleplus i,
+.et_monarch li.et_social_googleplus:hover {
+    background-color: #f00;
+}
+.et_monarch .et_social_facebook,
+.et_monarch .et_social_facebook,
+.et_monarch .et_social_networks.et_social_circle .et_social_facebook i,
+.et_monarch li.et_social_facebook:hover {
+    background-color: #253399;
 }
 /* ABOUT PAGE */
 /**************/
@@ -770,7 +781,7 @@ body .gform_wrapper div.validation_error {
 #map {
 	height: 300px;
 	position: relative;
-	border: 1px solid #000;
+	border: 2px solid #323334;
 	margin-bottom: 10px;
 }
 .gm-style-mtc {
@@ -873,7 +884,7 @@ time {
 /* COMMENTS */
 /************/
 .comment-list {
-  background: #f0f0f0;
+  background: #e3e3e3;
   padding: 5px;
 }
 .comment {
@@ -884,12 +895,44 @@ time {
 	border-left: 1px solid #dcdcdc;
 }
 .comment-form input, .comment-form textarea {
-  border-color: #000;
+  border-color: #adadad;
+  background: #fff;
 }
 .says, .comments-title span {
 	display: none;
 }
-/* Archives header */
+/* COMMENT FORM */
+/****************/
+#commentform input[type=submit] {
+  border-color: #f8f8f8;
+  background: #f00;
+  color: #fff;
+  box-shadow: 0px 0px 1px 1px #000;
+}
+.logged-in-as {
+  margin: 0 0 20px;
+}
+.comment-reply-title {
+  margin-bottom: 30px;
+}
+#comment {
+  width: 100%;
+  max-width: 100%;
+}
+.comment-form-comment {
+  position: relative;
+  border: 1px solid #adadad;
+  padding: 6px 6px 0px 6px;
+  width: 100%;
+  background: rgb(227, 227, 227);
+  max-width: 400px;
+}
+.comment-form-comment label {
+  position: absolute;
+  top: -19px;
+  left: -1px;
+}
+/* ARCHIVES HEADER */
 /*******************/
 .page-blogs .page-title {
   margin: 0 0 20px 0;
@@ -948,10 +991,33 @@ time {
 /* FORM */
 /********/
 .form {
-	background: #323334;
+	border: 1px solid #000;
 	padding: 10px;
-	color: #fff;
+	color: #000;
 }
+.form input:not([type=file]), .form textarea {
+  border: 2px solid #858585;
+  color: #000;
+}
+.form input:focus:not([type=file]),
+.form input:active:not([type=file]),
+.form textarea:focus,
+.form textarea:active  {
+  border: 2px solid #253399;
+}
+.form input[type="file"] {
+  color: #fff;
+}
+.form input[type="submit"] {
+  border: 1px solid #000;
+}
+
+.form .gform_wrapper .gfield_error .gfield_label,
+.form .gform_wrapper .gfield_radio li label,
+.form .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+  color: #000;
+}
+
 .form h3 {
 	font-size: 2em;
 }
@@ -1057,7 +1123,7 @@ body .gform_wrapper li.gfield_error ul.gfield_radio {
   height: 40px;
   width: 100%;
   margin-top: 10px;
-  background: #fff;
+  background: #323334;
   position: relative;
 }
 .footer-base-left {
@@ -1071,17 +1137,19 @@ body .gform_wrapper li.gfield_error ul.gfield_radio {
 	position: absolute;
   bottom: 10px;
   right: 15px;
+  background: #fff;
+  padding: 1px;
 }
 .footer-base-left a {
 	font-size: 1.1em;
-	color: #000;
+	color: #fff;
 }
 #date {
-	color: #000;
+	color: #adadad;
 }
 #copyright {
 	font-size: 1em;
-	color: #000;
+	color: #adadad;
 }
 
 
