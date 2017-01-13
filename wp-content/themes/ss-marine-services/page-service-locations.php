@@ -1,7 +1,11 @@
 <?php
 /*
-Template Name: clearwater-florida-Page
+Template Name: location-template-page
 */
+// Custom Fields
+$latitude = get_post_meta(get_the_ID(), 'latitude', true);
+$longitude = get_post_meta(get_the_ID(), 'longitude', true);
+$title = get_post_meta(get_the_ID(), 'title', true);
 get_header(); ?>
   <?php if (have_posts()) {
         while (have_posts()) {
@@ -14,8 +18,8 @@ get_header(); ?>
         <div class="service-area-page-map">
           <div id="map"></div>
           <script>
-            var cityLocation = {lat: 27.965853, lng: -82.800103};
-            var ssMarine = {lat: 28.170540, lng: -82.769170};
+          console.log(<?php echo $latitude; ?>)
+            var cityLocation = {lat: <?php echo $latitude; ?>, lng: <?php echo $longitude; ?>};
               function initMap() {
                 // var bounds = new google.maps.LatLngBounds(cityLocation,ssMarine);
                 var map = new google.maps.Map(document.getElementById('map'), {
@@ -27,14 +31,8 @@ get_header(); ?>
                 var marker = new google.maps.Marker({
                   position: cityLocation,
                   map: map,
-                  title: 'Clearwater Florida'
+                  title: '<?php echo $title; ?>'
                 });
-                // var marker = new google.maps.Marker({
-                //   position: ssMarine,
-                //   map: map,
-                //   title: 'S&S Marine Services'
-                // });
-                // map.fitBounds(bounds);
             }
           </script>
           <div id="service-areas-content">

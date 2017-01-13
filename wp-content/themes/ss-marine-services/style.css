@@ -993,19 +993,21 @@ time {
 /* FORM */
 /********/
 .form {
-  border: 1px solid #000;
+  border: 2px solid #323334;
   padding: 10px;
   color: #000;
+  background: #00abf0;
+  box-shadow: 0px 0px 4px 1px #323334
 }
 .form input:not([type=file]), .form textarea {
-  border: 2px solid #858585;
+  border: 2px solid #424242;
   color: #000;
 }
 .form input:focus:not([type=file]),
 .form input:active:not([type=file]),
 .form textarea:focus,
 .form textarea:active  {
-  border: 2px solid #253399;
+  border: 2px solid #000;
 }
 .form input[type="file"] {
   color: #fff;
@@ -1013,7 +1015,6 @@ time {
 .form input[type="submit"] {
   border: 1px solid #000;
 }
-
 .form .gform_wrapper .gfield_error .gfield_label,
 .form .gform_wrapper .gfield_radio li label,
 .form .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
@@ -1032,8 +1033,26 @@ body .gform_wrapper .gfield_error .gfield_label {
 body .gform_wrapper li.gfield_error ul.gfield_radio {
   color: #fff;
 }
+body .gform_wrapper li.gfield_error div.ginput_complex.ginput_container label, .gform_wrapper li.gfield_error ul.gfield_checkbox, .gform_wrapper li.gfield_error ul.gfield_radio {
+    color: #000;
+}
+body .gform_wrapper .field_description_below .gfield_description {
+    display: none;
+}
+body .gform_wrapper h3.gform_title {
+    font-size: 30px;
+}
+body #gform_2 .gform_wrapper li.gfield_error div.ginput_complex.ginput_container label, .gform_wrapper li.gfield_error ul.gfield_checkbox, .gform_wrapper li.gfield_error ul.gfield_radio {
+    color: #000;
+}
 .form .gform_body {
   max-width: 100%;
+}
+#service-request-background {
+  background-image: url('assets/images/knitted-netting.png');
+}
+.gform_wrapper .gform_heading {
+  border-bottom: 1px solid #fff;
 }
 
 
@@ -1165,6 +1184,11 @@ body .gform_wrapper li.gfield_error ul.gfield_radio {
 @media only screen and (min-width: 1000px) {
   .navbar-default .navbar-nav>li>a {
     font-size: 1.31em;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .form {
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 860px) {

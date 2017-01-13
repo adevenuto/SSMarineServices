@@ -7,6 +7,8 @@ get_header(); ?>
         while (have_posts()) {
         the_post();
   ?>
+<div id="service-request-background">
+
   <div class="container pages">
     <div class="row">
       <div class="col-md-8">
@@ -21,5 +23,6 @@ get_header(); ?>
       <div class="col-md-4 sidebar"><?php get_sidebar() ?></div>
     </div>
   </div>
+
 </div>
 <?php get_footer(); ?>
